@@ -6,7 +6,7 @@
 #include <ctime>
 using namespace std;
 
-class ActionControlSystem {
+class AccessControlSystem {
 private:
 	string businessHours;
 
@@ -19,3 +19,5 @@ public:
 	string getBusinessHours() const;
 
 };
+
+#endif
