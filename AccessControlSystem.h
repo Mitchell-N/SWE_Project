@@ -12,11 +12,24 @@ private:
 
 public:
 	//Constructor
-	AccessControlSystem();
+	AccessControlSystem ();
 
 	//Business hours getter
-	void setBusinessHours(const string& hours);
-	string getBusinessHours() const;
+	void setBusinessHours (const string& hours);
+	string getBusinessHours () const;
+
+	//Access methods
+	bool verifyCredentials();
+	bool checkAccessLevel();
+	void grantAccess();
+	void denyAccess();
+	void logAccessAttempt();
+	void lockAccess();
+	void unlockAccess();
+	void initiateLockdown();
+
+	
+	string currentTime() const;
 
 };
 
