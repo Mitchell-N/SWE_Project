@@ -11,19 +11,19 @@ private:
 	string businessHours;
 
 public:
-	//Constructor
+	// constructor
 	AccessControlSystem ();
 
-	//Business hours getter
+	// business hours accessors
 	void setBusinessHours (const string& hours);
 	string getBusinessHours () const;
 
-	//Access methods
-	bool verifyCredentials();
-	bool checkAccessLevel();
-	void grantAccess();
-	void denyAccess();
-	void logAccessAttempt();
+	// access methods
+	bool verifyCredentials(const string& userID, const string& password);
+	bool checkAccessLevel(const string& userID, const string& requestedLevel);
+	void grantAccess(const string& userID, const string& level);
+	void denyAccess(const string& userID, const string& level);
+	void logAccessAttempt(const string& userID, const string& level, bool success);
 	void lockAccess();
 	void unlockAccess();
 	void initiateLockdown();
